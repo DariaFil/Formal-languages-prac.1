@@ -1,16 +1,18 @@
 #include "parse.h"
+#include "tests.h"
 
 int main() {
+    run_all_tests();
     string polish_string;
     cin >> polish_string;
     char k;
     cin >> k;
-    Duo ans = parse(polish_string, k);
-    if (ans.max_k_len == -2)
+    int ans = parse(polish_string, k);
+    if (ans == ERROR)
         cout << "ERROR" << endl;
-    else if (ans.max_k_len == -1)
+    else if (ans == INF)
         cout << "INF" << endl;
     else
-        cout << ans.max_k_len << endl;
+        cout << ans << endl;
     return 0;
 }

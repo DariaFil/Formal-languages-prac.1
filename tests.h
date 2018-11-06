@@ -18,6 +18,7 @@ using std::endl;
 
 string error_tests();
 string regular_tests();
+void run_all_tests();
 
 #define REGULAR_PARSE_TESTS_H
 
